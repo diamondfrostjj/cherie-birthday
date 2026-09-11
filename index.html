@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Cherie! ❤️</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <!-- Background Floating Hearts -->
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <!-- ================================================================= -->
+    <!-- 1. HERO BANNER SECTION                                            -->
+    <!-- ================================================================= -->
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Happy Birthday, Mi Loaf! 🎉</h1>
+            <p class="subtitle">A small corner of the web made just for you.</p>
+
+            <div class="hero-card">
+                <div class="hero-image-wrapper">
+                    <img src="assets/cherieheaderphoto.jpg" alt="Us Together" class="hero-img">
+                </div>
+
+                <div class="hero-message">
+                    <p>
+                        Happy Birthday, my love! I’m so grateful to spend another birthday with you, loving and cherishing you more every single day. You mean the world to me, and I can’t wait for a lifetime of these special days together. ❤️
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================================================================= -->
+    <!-- 2. LIVE DAYS TOGETHER COUNTER                                    -->
+    <!-- ================================================================= -->
+    <section class="counter-section">
+        <h2>We've Been Together For 💕</h2>
+        <div class="counter-container">
+            <div class="time-box">
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 3. TIMELINE SECTION (3D FLIP CARDS)                               -->
+    <!-- ================================================================= -->
+    <section class="timeline-section">
+        <h2>There's a first time for everything 📸</h2>
+        <p class="timeline-hint-text">Tap any photo to flip it over!</p>
+        
+        <div class="timeline">
+
+            <!-- Memory Card 1 -->
+            <div class="timeline-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/cheriememory1photo.jpg" alt="Where It All Started" class="timeline-img">
+                        <span class="flip-badge">Tap to flip 🔄</span>
+                    </div>
+                    <div class="card-back">
+                        <span class="date">Aug 6 2024</span>
+                        <h3>Where It All Started</h3>
+                        <p>Who would have thought that this day would start the most amazing chapter of my life? I wouldn't trade a single second of our story for the world. I love you, and I'm so excited for a long and wonderful life together.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 2 -->
+            <div class="timeline-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/cheriebirthdaymemory2.jpg" alt="Our first birthday together" class="timeline-img">
+                        <span class="flip-badge">Tap to flip 🔄</span>
+                    </div>
+                    <div class="card-back">
+                        <span class="date">September 14 2024</span>
+                        <h3>Our first birthday together</h3>
+                        <p>Our very first birthday together will always hold a special place in my heart. Watching your face light up that day made me realize just how much I loved making you smile. It was the moment I knew I wanted to be the one celebrating you for the rest of our lives.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 3 -->
+            <div class="timeline-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="assets/cheriememory3.jpg" alt="Our first halloween party together" class="timeline-img">
+                        <span class="flip-badge">Tap to flip 🔄</span>
+                    </div>
+                    <div class="card-back">
+                        <span class="date">October 12 2024</span>
+                        <h3>Our first halloween party together</h3>
+                        <p>Our first Halloween party trip will always be one of my absolute favorite memories. I'll never forget us scrambling for literal last-minute costumes. This is when I knew that I wanted to spend every chaotic moment with you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Memory Card 4 -->
+            <div class="timeline-card" onclick="this.classList.toggle('flipped')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <!-- Added focus-face class below -->
+                        <img src="assets/cheriememory4.jpg" alt="Our first family trip together" class="timeline-img focus-face">
+                        <span class="flip-badge">Tap to flip 🔄</span>
+                    </div>
+                    <div class="card-back">
+                        <span class="date">January 4 2025</span>
+                        <h3>Our first family trip together</h3>
+                        <p>Our first family trip together will forever be my most memorable one. I still remember the exact mix of excitement and pressure when your dad asked me to handle the drive there and back! Being welcomed into your family and sharing that journey with you made it a trip I'll cherish forever.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 4. MINI QUIZ SECTION                                              -->
+    <!-- ================================================================= -->
+    <section class="quiz-section">
+        <h2>The "Us" Mini Quiz 🧩</h2>
+        <p>Answer the questions correctly to trigger your surprise!</p>
+
+        <div class="quiz-container">
+            <!-- Question 1 -->
+            <div class="quiz-card" id="q1">
+                <p class="question-text">1. How much do I love you?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">I love you a lot</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">I love you more I win</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">I love you so so so so much</button>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-card" id="q2">
+                <p class="question-text">2. Which first memory of ours was your favorite?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Our first meet</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Our first birthday</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Our first halloween party</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Our first family trip</button>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-card" id="q4">
+                <p class="question-text">3. What is my absolute favorite thing about you?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Your smile</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Your laugh</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">How caring you are</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">All of the above ❤️</button>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-card" id="q5">
+                <p class="question-text">4. What are we doing for the rest of our lives?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">Making endless memories together</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">Live in a home full of love</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false)">Live in a home filled with cats and dogs</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">All of the above</button>
+                </div>
+            </div>
+
+            <!-- Question 9: The Sweet Trap -->
+            <div class="quiz-card" id="q9">
+                <p class="question-text">5. Who is the prettiest girl in the entire world?</p>
+                <div class="options">
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Cherie 💕</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">Mi Loaf 🥰</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true)">You, obviously!</button>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+        <!-- Success Message Hidden by Default -->
+        <div id="quiz-success" class="hidden">
+            <h3>You Passed! 🥳</h3>
+            <p>I love you more I win hihi!</p>
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- VIDEO MESSAGES SECTION                                            -->
+    <!-- ================================================================= -->
+    <section class="video-section">
+        <h2>Wishes From Friends 🎥</h2>
+        <p class="video-subtitle">Tap play to watch their birthday messages for you!</p>
+
+        <div class="video-grid">
+
+            <!-- Friend 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/edBZaqKaRhU" 
+                        title="Birthday message from Mitchelle" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Mitchelle</h3>
+                </div>
+            </div>
+
+            <!-- Friend 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/edBZaqKaRhU" 
+                        title="Birthday message from Mitchelle" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Friend 2</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 5. EXPLODING HEART SECTION                                        -->
+    <!-- ================================================================= -->
+    <section class="heart-section">
+        <h2>One Last Surprise... 💖</h2>
+        <p class="heart-instruction">Tap the heart to give it some love!</p>
+
+        <div id="heart-container">
+            <button id="growing-heart" onclick="growHeart()">💖</button>
+        </div>
+
+        <div id="heart-final-message" class="hidden">
+            <h3>Happy Birthday Cherie! 🥳</h3>
+            <p>I hope you enjoyed your litol corner of the internet! ❤️</p>
+        </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 6. FOOTER & SCRIPTS                                               -->
+    <!-- ================================================================= -->
+    <footer>
+        <p>Made with ❤️ by your favorite IT student.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
